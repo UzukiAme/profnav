@@ -7,7 +7,7 @@
   width: 100%;
 }
 li {
-  border: 1px solid #eee;
+  /*border: 1px solid #eee;*/
 }
 ul, li {
   list-style: none;
@@ -21,8 +21,7 @@ ul a, li a {
 div.active {
   width: 70%;
   position: absolute;
-  /*left: 7%; JS*/
-  border: 1px solid #FFA8FF;
+  /*border: 1px solid #FFA8FF;*/
 }
 .subitem {
   display: none;
@@ -31,13 +30,11 @@ div.active {
   display: block;
   position: absolute;
   text-align: center;
-  /*width: 50%; JS*/
   left: 0;
   margin-top: 40px;
 }
 .active .subitem:last-child {
   right: 0;
-  /*left: 50%; JS*/
 }
 #main-nav .tier-1 {
   /*text-align: center;

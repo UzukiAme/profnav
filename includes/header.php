@@ -19,7 +19,7 @@
         <li class="tier-1">
           <a href="#">Skills</a>
           <ul class="submenu">
-            <div class="active">
+            <div>
               <li class="subitem tier-2"><a href="#">Languages</a></li>
               <li class="subitem tier-2"><a href="#">Platforms</a></li>
             </div>
