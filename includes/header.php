@@ -19,22 +19,28 @@
         <li class="tier-1">
           <a href="#">Skills</a>
           <ul class="submenu">
-            <li class="subitem tier-2"><a href="#">Languages</a></li>
-            <li class="subitem tier-2"><a href="#">Platforms</a></li>
+            <div class="active">
+              <li class="subitem tier-2"><a href="#">Languages</a></li>
+              <li class="subitem tier-2"><a href="#">Platforms</a></li>
+            </div>
           </ul>
         </li>
         <li class="tier-1">
           <a href="#">Interests</a>
           <ul class="submenu">
-            <li class="subitem tier-2"><a href="#">Personal</a></li>
-            <li class="subitem tier-2"><a href="#">Professional</a></li>
+            <div>
+              <li class="subitem tier-2"><a href="#">Personal</a></li>
+              <li class="subitem tier-2"><a href="#">Professional</a></li>
+            </div>
           </ul>
         </li>
         <li class="tier-1">
           <a href="#">History</a>
           <ul class="submenu">
-            <li class="subitem tier-2"><a href="#">Tech</a></li>
-            <li class="subitem tier-2"><a href="#">Other</a></li>
+            <div>
+              <li class="subitem tier-2"><a href="#">Tech</a></li>
+              <li class="subitem tier-2"><a href="#">Other</a></li>
+            </div>
           </ul>
         </li>
       </ul>
