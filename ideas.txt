@@ -1,0 +1,8 @@
+*When adding animation, the first and last child vertical lines will create a corner with the
+  horizontal line. The subitems in the middle will be on lines that grow outward from the center
+  of the parent items. However, the first and last children's lines will grow down then inwards
+  towards the end of the line, from right to left or left to right depending on the side of the
+  screen it's on.
+*Database will have one table with tier 1 menu items, then another table of sub items that
+  are related to the tier 1 items. Another table will store the content that is to be served up
+  depending on the item that is being viewed.
