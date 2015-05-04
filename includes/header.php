@@ -11,6 +11,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/plugins/CSSRulePlugin.min.js"></script>
     <link rel="stylesheet" href="css/main.css" charset="utf-8">
     <link rel="stylesheet" href="css/normalize.css" charset="utf-8">
+    <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <nav id="main-nav">
@@ -18,7 +19,7 @@
         <li class="tier-1"><a href="#">Personality</a></li>
         <li class="tier-1">
           <a href="#">Skills</a>
-          <ul class="submenu">
+          <ul class="submenu skills-sub">
             <div>
               <li class="subitem tier-2"><a href="#">Languages</a></li>
               <li class="subitem tier-2"><a href="#">Platforms</a></li>
@@ -26,7 +27,7 @@
           </ul>
         </li>
         <li class="tier-1">
-          <a href="#">Interests</a>
+          <a href="#"><p>Interests</p></a>
           <ul class="submenu">
             <div>
               <li class="subitem tier-2"><a href="#">Personal</a></li>

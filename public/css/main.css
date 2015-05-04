@@ -1,4 +1,11 @@
+
+
 /*navigation*/
+nav {
+  font-family: 'Share Tech Mono';
+  font-size: 1.6em;
+  border: 1px solid orange;
+}
 #main-nav {
   width: 100%;
   position: relative;
@@ -7,7 +14,7 @@
   width: 100%;
 }
 li {
-  /*border: 1px solid #eee;*/
+  border: 1px solid #eee;
 }
 ul, li {
   list-style: none;
@@ -17,11 +24,12 @@ ul a, li a {
   text-decoration: none;
   text-align: center;
   display: block;
+  border: 1px solid red;
 }
 div.active {
   width: 70%;
   position: absolute;
-  /*border: 1px solid #FFA8FF;*/
+  border: 1px solid #FFA8FF;
 }
 .subitem {
   display: none;
@@ -43,4 +51,7 @@ div.active {
 }
 #main-nav ul:first-child {
   display: table;
+}
+#main-nav p {
+  border: 1px solid blue;
 }
