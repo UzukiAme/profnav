@@ -1,10 +1,14 @@
-
-
 /*navigation*/
+nav .submenu {
+  font-size: .95em;
+}
 nav {
   font-family: 'Share Tech Mono';
   font-size: 1.6em;
-  border: 1px solid orange;
+  /*border: 1px solid orange;*/
+}
+nav > ul {
+  /*border: 1px solid purple;*/
 }
 #main-nav {
   width: 100%;
@@ -14,22 +18,25 @@ nav {
   width: 100%;
 }
 li {
-  border: 1px solid #eee;
+  /*border: 1px solid #eee;*/
 }
 ul, li {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 ul a, li a {
   text-decoration: none;
   text-align: center;
   display: block;
-  border: 1px solid red;
+  /*border: 1px solid red;*/
+  margin: 0;
+  padding: 0;
 }
 div.active {
   width: 70%;
   position: absolute;
-  border: 1px solid #FFA8FF;
+  /*border: 1px solid #FFA8FF;*/
 }
 .subitem {
   display: none;
@@ -45,13 +52,11 @@ div.active {
   right: 0;
 }
 #main-nav .tier-1 {
-  /*text-align: center;
-  float: left;*/
   display: table-cell;
 }
 #main-nav ul:first-child {
   display: table;
 }
-#main-nav p {
-  border: 1px solid blue;
+#main-nav span.underline {
+  border-bottom: 1px solid blue;
 }

@@ -1,20 +1,25 @@
-$("#main-nav .tier-1 > a").css({
-    width: function() {
+mainItemsDisplay();
+function mainItemsDisplay() {
+  $(".tier-1 > a").css({//ensure widths of table cells are
+    width: function() {//of uniform widths
       return $(window).width()/$("#main-nav .tier-1").length;
     }
   });
+}
 subItemsDisplay();
 function subItemsDisplay() {
   $(".tier-1").hover(function() {//on hover
     $(this).find(".submenu div").toggleClass("active");//add "active" class
     var parent = $(this),//make the parent li more recognizable
       parentCenter = $(parent).offset().left + $(parent).width()/2,//get the center of the parent li
-      subItemWidth = $(".active").width()/$(".active li").length;//get the width of each subitem depending on their total number
+      subItemWidth = $(".active").width()/$(".active li").length,//get the width of each subitem depending on their total number
+      divTop = $(".active").offset().top,
+      liBottom = $(".active").find("a").offset().top + $(".active").find("a").height();
       $(".active").height(function() {//set height of active div
-        var divTop = $(".active").offset().top;
-        var liBottom = $(".active").children("li").offset().top + $(".active").children("li").height();
-        return divTop + liBottom + "px";
-      });
+         return liBottom - divTop + "px";//to encompass all the space between the
+      })//.width(function() {
+        //.each(total += current span width)
+      //});//tier-1 and tier-2 menu items
     if($(parent).is(":last-child")) {//if the top level menu item is on the far right
       $(".active").css({right: "0"});//align the active div with the right of the screen
     } else if($(parent).is(":first-child")) {//if the top level is on the far left
@@ -49,20 +54,10 @@ function subItemsDisplay() {
     });
   }, function() {//When the mouse leaves the top level menu item
     $(this).find(".submenu div").toggleClass("active");//remove the active class, hiding the subitems
+    $("#main-nav .submenu").height(0);//reset heights so that the nav doesn't
+    $(".tier-1 .submenu div").height(0);//continue to leave space for them
   });
 }
 //if #main-nav div .hasClass("active")
-subHoverDisplay();
-function subHoverDisplay() {
-  $(".tier-1 a").hover(function() {
-    var divTop = $(this).offset().top;
-    var liBottom = $(this).children("li").offset().top + $(this).children("li").height();
-    $(this).height(function() {
-      return divXPos + liBottomXPos + "px";
-    });//end height function
-    alert(divTop);
-  }/*end mouseIn action*/, function() {
-    return;
-  });
-}//end main function
+//end main function
 //div.active.height(function() {return div.active xpos + (div.active li xpos + div.active li height)});

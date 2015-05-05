@@ -1,3 +1,31 @@
+<?php
+$menu_items = [
+  "Personality" => array(
+    "tier" => "tier-1",
+  ),
+  "Skills" => array(
+    "tier" => "tier-1",
+    array(
+      "tier" => "tier-2",
+      "labels" => array("Languages", "Platforms")
+    ),
+  ),
+  "Interests" => array(
+    "tier" => "tier-1",
+    array(
+      "tier" => "tier-2",
+      "labels" => array("Personal", "Professional")
+    )
+  ),
+  "History" => array(
+    "tier" => "tier-1",
+    array(
+      "tier" => "tier-2",
+      "labels" => array("Tech", "Other")
+    )
+  )
+];
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -16,33 +44,18 @@
   <body>
     <nav id="main-nav">
       <ul>
-        <li class="tier-1"><a href="#">Personality</a></li>
-        <li class="tier-1">
-          <a href="#">Skills</a>
-          <ul class="submenu skills-sub">
-            <div>
-              <li class="subitem tier-2"><a href="#">Languages</a></li>
-              <li class="subitem tier-2"><a href="#">Platforms</a></li>
-            </div>
-          </ul>
-        </li>
-        <li class="tier-1">
-          <a href="#"><p>Interests</p></a>
-          <ul class="submenu">
-            <div>
-              <li class="subitem tier-2"><a href="#">Personal</a></li>
-              <li class="subitem tier-2"><a href="#">Professional</a></li>
-            </div>
-          </ul>
-        </li>
-        <li class="tier-1">
-          <a href="#">History</a>
-          <ul class="submenu">
-            <div>
-              <li class="subitem tier-2"><a href="#">Tech</a></li>
-              <li class="subitem tier-2"><a href="#">Other</a></li>
-            </div>
-          </ul>
-        </li>
-      </ul>
+        <?php foreach ($menu_items as $label => $key): ?>
+          <li class="tier-1"><a href="#"><span class="underline"><?php echo htmlspecialchars($label); ?></span></a>
+            <ul class="submenu">
+              <div class="">
+                <?php if(array_key_exists(0, $key)) {
+                  $subLabels = $key[0]["labels"];
+                  foreach($subLabels as $subLabel): ?>
+                    <li class="subitem tier-2"><a href="#"><span class="underline"><?php echo htmlspecialchars($subLabel); ?></span></a></li>
+                <?php endforeach;
+                } ?>
+              </div>
+            </ul>
+          </li>
+        <?php endforeach; ?>
     </nav>
