@@ -1,30 +1,6 @@
 <?php
-$menu_items = [
-  "Personality" => array(
-    "tier" => "tier-1",
-  ),
-  "Skills" => array(
-    "tier" => "tier-1",
-    array(
-      "tier" => "tier-2",
-      "labels" => array("Languages", "Platforms")
-    ),
-  ),
-  "Interests" => array(
-    "tier" => "tier-1",
-    array(
-      "tier" => "tier-2",
-      "labels" => array("Personal", "Professional")
-    )
-  ),
-  "History" => array(
-    "tier" => "tier-1",
-    array(
-      "tier" => "tier-2",
-      "labels" => array("Tech", "Other")
-    )
-  )
-];
+include_once("../includes/functions.php");
+$menu_items = get_menu_items();
 ?>
 <!DOCTYPE html>
 <html>
@@ -42,20 +18,20 @@ $menu_items = [
     <link href='http://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <nav id="main-nav">
-      <ul>
-        <?php foreach ($menu_items as $label => $key): ?>
-          <li class="tier-1"><a href="#"><span class="underline"><?php echo htmlspecialchars($label); ?></span></a>
-            <ul class="submenu">
-              <div class="">
-                <?php if(array_key_exists(0, $key)) {
-                  $subLabels = $key[0]["labels"];
-                  foreach($subLabels as $subLabel): ?>
-                    <li class="subitem tier-2"><a href="#"><span class="underline"><?php echo htmlspecialchars($subLabel); ?></span></a></li>
-                <?php endforeach;
-                } ?>
-              </div>
-            </ul>
-          </li>
-        <?php endforeach; ?>
-    </nav>
+  <nav id="main-nav">
+    <ul>
+      <?php foreach ($menu_items as $label => $key): ?>
+        <li class="tier-1"><a href="#"><span class="underline"><?php echo htmlspecialchars($label); ?></span></a>
+          <ul class="submenu">
+            <div class="">
+              <?php if(array_key_exists(0, $key)) {
+                $subLabels = $key[0]["labels"];
+                foreach($subLabels as $subLabel): ?>
+                  <li class="subitem tier-2"><a href="#"><span class="underline"><?php echo htmlspecialchars($subLabel); ?></span></a></li>
+              <?php endforeach;
+              } ?>
+            </div>
+          </ul>
+        </li>
+      <?php endforeach; ?>
+  </nav>

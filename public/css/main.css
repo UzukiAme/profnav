@@ -1,22 +1,4 @@
 /*navigation*/
-nav .submenu {
-  font-size: .95em;
-}
-nav {
-  font-family: 'Share Tech Mono';
-  font-size: 1.6em;
-  /*border: 1px solid orange;*/
-}
-nav > ul {
-  /*border: 1px solid purple;*/
-}
-#main-nav {
-  width: 100%;
-  position: relative;
-}
-#main-nav ul:first-of-type {
-  width: 100%;
-}
 li {
   /*border: 1px solid #eee;*/
 }
@@ -29,12 +11,46 @@ ul a, li a {
   text-decoration: none;
   text-align: center;
   display: block;
+  color: #3EFF00;
+  text-shadow:
+  -1px -1px 1px #000,
+  -1px 1px 0 #000,
+  1px -1px 0 #000,
+  1px 1px 0 #000
+  ;
   /*border: 1px solid red;*/
   margin: 0;
   padding: 0;
 }
+nav > ul {
+  /*border: 1px solid purple;*/
+}
+nav {
+  font-family: 'Share Tech Mono';
+  font-size: 1.6em;
+  background: #030D00;
+  padding: 15px 0 15px 0;
+  /*border: 1px solid orange;*/
+}
+nav .submenu {
+  font-size: .95em;
+}
+nav .submenu a {
+  color: #030D00;
+  text-shadow:
+  -1px -1px 0 #3EFF00,
+  -1px 1px 0 #3EFF00,
+  1px -1px 0 #3EFF00,
+  1px 1px 0 #3EFF00
+}
+#main-nav {
+  width: 100%;
+  position: relative;
+}
+#main-nav ul:first-of-type {
+  width: 100%;
+}
 div.active {
-  width: 70%;
   position: absolute;
   /*border: 1px solid #FFA8FF;*/
 }
@@ -56,7 +72,4 @@ div.active {
 }
 #main-nav ul:first-child {
   display: table;
-}
-#main-nav span.underline {
-  border-bottom: 1px solid blue;
 }
