@@ -57,6 +57,9 @@ div.active {
 .subitem {
   display: none;
 }
+.subitem a p {
+  padding-bottom: 5px;
+}
 .active .subitem {
   display: block;
   position: absolute;
@@ -72,4 +75,19 @@ div.active {
 }
 #main-nav ul:first-child {
   display: table;
+}
+.subcover {
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  /*border: 1px solid #4bc;*/
+  z-index: 2;
+  /*top: 100px;*/
+}
+.vertical {
+  stroke: #efefef;
+}
+.submenu .sizeref {
+  position: relative;
+  opacity: 0;
 }
