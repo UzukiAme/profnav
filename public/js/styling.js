@@ -64,27 +64,6 @@ function activeDimensions() {
 
 /*
 * @description
-*  construct array with x values cooresponding to the center off each sub menu
-*  element relative to the active div (the canvas space)
-* @purpose
-*  to later dynamically create two paths in the center of each sub menu (the little dashes
-*  under the sub menu items)
-* @called
-*  drawLines()
-*/
-var siwHalfx = [];
-function liCenters() {
-  $(".active li").each(function() {
-    if(($(this).offset().left - $(".active").offset().left) <= 0) {
-      siwHalfx.push($(this).width()/2);
-    } else {
-      siwHalfx.push($(this).offset().left - $(".active").offset().left + subItemWidth/2);
-    }
-  });
-}
-
-/*
-* @description
 *  create one svg path that draws an L and one that draws a backwards L, as well
 *  as dash below each sub menu item
 * @called
@@ -122,6 +101,27 @@ function drawLines(x) {
 
 /*
 * @description
+*  construct array with x values cooresponding to the center off each sub menu
+*  element relative to the active div (the canvas space)
+* @purpose
+*  to later dynamically create two paths in the center of each sub menu (the little dashes
+*  under the sub menu items)
+* @called
+*  drawLines()
+*/
+var siwHalfx = [];
+function liCenters() {
+  $(".active li").each(function() {
+    if(($(this).offset().left - $(".active").offset().left) <= 0) {
+      siwHalfx.push($(this).width()/2);
+    } else {
+      siwHalfx.push($(this).offset().left - $(".active").offset().left + subItemWidth/2);
+    }
+  });
+}
+
+/*
+* @description
 *  animation of each svg item as well as sub menu items on tier-1 li hover
 * @called
 *  itemsDisplay()
@@ -133,8 +133,8 @@ function animateIn() {
   .fromTo("#lLine", 1.2, {drawSVG:"0% 0%"}, {drawSVG:"0% 100%", ease:Expo.easeInOut}, "start")
   .fromTo($("#vllSmall"), 0.5, {drawSVG:"100% 100%"}, {drawSVG:"0% 100%", ease:Expo.easeOut}, "small-=0.4")
   .fromTo($("#vlrSmall"), 0.5, {drawSVG:"100% 100%"}, {drawSVG:"0% 100%", ease:Expo.easeOut}, "small-=0.4")
-  .to($(".subitem .sizeref"), 1, {top:"0", ease:Expo.easeOut}, "items-=0.6")
-  .to($(".subitem .sizeref"), 0.8, {opacity:1, ease:Expo.easeOut}, "items-=0.5");
+  .fromTo($(".subitem .sizeref"), 1, {top:"48px"}, {top:"0", ease:Expo.easeOut}, "items-=0.6")
+  .fromTo($(".subitem .sizeref"), 0.8, {opacity:"0"}, {opacity:1, ease:Expo.easeOut}, "items-=0.5");
   subTL.play();
 }
 
