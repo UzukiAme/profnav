@@ -151,7 +151,9 @@ itemsDisplay();
 function itemsDisplay() {
   //space each top level menu item evenly based on window size*/
   $(".tier-1 > a").width(function() {
-    return $(window).width()/$("#main-nav .tier-1").length;
+    $(window).resize(function() {
+      return $(window).width()/$("#main-nav .tier-1").length;
+    });
   });
   //move the sub item labels and the div that hides them below the sub menu
   $(".subitem .sizeref, .subcover").css({
