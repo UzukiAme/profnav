@@ -1,7 +1,7 @@
 # profnav
 Animated navigation bar for personal profile site
 
-Go to [My Profle](www.aprildcarter.com "April Carter") to see how this turned out so far.
+Go to the [development page](www.kitchentabledigest.com/animatedmenu "April Carter") to see how this turned out so far.
 
 ### To do
 1. ~~Make the menu scale when the window is resized~~
